@@ -6,6 +6,5 @@ MAILJET_SECRET_KEY = os.getenv("MAILJET_SECRET_KEY")
 RESEND_API_KEY = os.getenv("RESEND_API_KEY")
 FROM_EMAIL = "onboarding@resend.dev"   # works without domain verification
 TO_EMAILS = [
-    "gambhiraojas45@gmail.com",
     "ganeshgiddaluru09@gmail.com"
 ]
