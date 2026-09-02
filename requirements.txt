@@ -2,3 +2,4 @@ feedparser
 groq
 mailjet_rest
 requests
+resend
