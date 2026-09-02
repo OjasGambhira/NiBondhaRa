@@ -1,5 +1,5 @@
 import resend
-from config import RESEND_API_KEY, FROM_EMAIL, TO_EMAILS
+from config import RESEND_API_KEY, FROM_EMAIL, TO_EMAIL
 
 resend.api_key = RESEND_API_KEY
 
