@@ -7,7 +7,7 @@ def send_email(subject, html_content):
     try:
         params = {
             "from": FROM_EMAIL,
-            "to": [{"email": email} for email in TO_EMAILS],
+            "to": TO_EMAIL,
             "subject": subject,
             "html": html_content,
         }
