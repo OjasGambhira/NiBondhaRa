@@ -5,16 +5,15 @@ resend.api_key = RESEND_API_KEY
 
 def send_email(subject, html_content):
     try:
-        for recipient in TO_EMAILS:
-            params = {
-                "from": FROM_EMAIL,
-                "to": recipient,
-                "subject": subject,
-                "html": html_content,
-            }
+        params = {
+            "from": FROM_EMAIL,
+            "to": [{"email": email} for email in TO_EMAILS],
+            "subject": subject,
+            "html": html_content,
+        }
 
-            resend.Emails.send(params)
-            print(f"Email sent successfully to {recipient}")
+        resend.Emails.send(params)
+        print("Email sent successfully to all recipients.")
 
     except Exception as e:
         print("Error sending email:", e)
